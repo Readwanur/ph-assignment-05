@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar";
-import Banner from "./components/Banner"
+import Banner from "./components/Banner";
 import Explore from "./components/Explore";
 import Footer from "./components/Footer";
 const App = () => {
+  const [stackCount, setStackCount] = useState(0);
   return (
     <div>
       <Navbar />
       <Banner />
-      <Explore />
+      <Explore stackCount={stackCount} setStackCount={setStackCount}  />
       <Footer />
     </div>
   );

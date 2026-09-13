@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState, type Dispatch } from "react";
 import Cards from "./Cards";
 import YourStack from "./YourStack";
 import type { StackTypes } from "../types/StackTypes";
@@ -10,7 +10,13 @@ const stackFetch = async (): Promise<StackTypes[]> => {
   return data;
 };
 
-const Explore = () => {
+interface IexploreProps {
+  stackCount: number;
+  setStackCount: Dispatch<React.SetStateAction<number>>;
+}
+
+const Explore = ({ stackCount, setStackCount }: IexploreProps) => {
+  const [selectedStack, setSelectedStack] = useState<StackTypes[]>([]);
   return (
     <section className="max-w-7xl mx-auto py-10">
       <div className="mb-8">
@@ -24,13 +30,24 @@ const Explore = () => {
 
       <div className="flex flex-col lg:flex-row items-start gap-8">
         <div className="flex-1 w-full">
-          <Suspense fallback = {<h1>Loading Data...</h1>}>
-            <Cards stackPromise={stackFetch()} />
+          <Suspense fallback={<h1>Loading Data...</h1>}>
+            <Cards
+              stackPromise={stackFetch()}
+              stackCount={stackCount}
+              setStackCount={setStackCount}
+              selectedStack={selectedStack}
+              setSelectedStack={setSelectedStack}
+            />
           </Suspense>
         </div>
 
         <div className="w-full lg:w-[250px] shrink-0 sticky top-24">
-          <YourStack />
+          <YourStack
+            stackCount={stackCount}
+            setStackCount={setStackCount}
+            selectedStack={selectedStack}
+            setSelectedStack={setSelectedStack}
+          />
         </div>
       </div>
     </section>
