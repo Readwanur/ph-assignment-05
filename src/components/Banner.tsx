@@ -2,8 +2,8 @@ import banner from "../assets/banner-stack.png";
 
 const Banner = () => {
   return (
-    <div className="px-4 md:px-8">
-      <div className="flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto my-6 lg:my-10 gap-8">
+    <div>
+      <div className="flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto my-6 lg:my-10 px-4 md:px-8 gap-8">
         <div className="flex flex-col justify-center gap-6 lg:gap-15 text-center lg:text-left w-full lg:w-1/2">
           <h1 className="text-4xl lg:text-[60px] font-extrabold leading-tight">
             Build Your Ideal <br className="hidden lg:block" />

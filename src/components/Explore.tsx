@@ -2,6 +2,7 @@ import React, { Suspense, useState, type Dispatch } from "react";
 import Cards from "./Cards";
 import YourStack from "./YourStack";
 import type { StackTypes } from "../types/StackTypes";
+import { DiVim } from "react-icons/di";
 
 const stackFetch = async (): Promise<StackTypes[]> => {
   const result = await fetch("/public/data.json");
@@ -30,7 +31,9 @@ const Explore = ({ stackCount, setStackCount }: IexploreProps) => {
 
       <div className="flex flex-col lg:flex-row items-start gap-8">
         <div className="flex-1 w-full">
-          <Suspense fallback={<h1>Loading Data...</h1>}>
+          <Suspense fallback={<div className="min-h-100 flex items-center justify-center">
+            <span className="loading flex items-center justify-center loading-spinner text-secondary"></span>
+          </div>}>
             <Cards
               stackPromise={stackFetch()}
               stackCount={stackCount}
