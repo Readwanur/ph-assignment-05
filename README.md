@@ -14,6 +14,8 @@ DevStack is an interactive web platform designed to help developers explore mode
 * **DaisyUI** 
 * **React Icons** 
 * **React Toastify**
+* **JSON**
+* **Vite** (Build tool)
 
 ---
 
