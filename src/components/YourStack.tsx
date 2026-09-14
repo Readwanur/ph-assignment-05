@@ -1,5 +1,6 @@
 import React, { type Dispatch } from "react";
 import type { StackTypes } from "../types/StackTypes";
+import { toast } from "react-toastify";
 
 interface IyourStackProps {
   stackCount: number;
@@ -17,6 +18,8 @@ const YourStack = ({
   const handleRemoveAll = () => {
     setSelectedStack([]);
     setStackCount(0);
+
+    toast.warn("All Stack removed")
   };
 
   const handleRemoveStack = (stack: StackTypes) => {
@@ -26,6 +29,8 @@ const YourStack = ({
 
     setSelectedStack(restStack);
     setStackCount(stackCount - 1);
+
+    toast.warning(`${stack.name} is removed`)
   };
 
   return (
