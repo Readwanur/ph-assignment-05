@@ -1,10 +1,9 @@
-import React from "react";
 import logo from "../assets/logo-text.png";
 
 const Footer = () => {
   return (
     <footer className="bg-white pt-20 pb-8 mt-20 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="col-span-1">
             <img src={logo} alt="DevStack Logo" className="mb-6 h-8" />

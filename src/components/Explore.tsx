@@ -18,7 +18,7 @@ interface IexploreProps {
 const Explore = ({ stackCount, setStackCount }: IexploreProps) => {
   const [selectedStack, setSelectedStack] = useState<StackTypes[]>([]);
   return (
-    <section className="max-w-7xl mx-auto py-10">
+    <section className="max-w-7xl mx-auto py-10 px-4 md:px-8">
       <div className="mb-8">
         <h1 className="text-[36px] font-extrabold leading-tight">
           Explore the <span className="text-[#f948a3]">Technologies</span>
