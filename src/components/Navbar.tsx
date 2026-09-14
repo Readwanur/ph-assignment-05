@@ -4,7 +4,7 @@ import hamburger from "../assets/hamburger.png";
 const Navbar = () => {
   return (
     <div className="sticky top-0 z-50 bg-white border-b border-gray-200">
-      <nav className="flex items-center justify-between py-4 px-4 md:px-8 max-w-[1280px] mx-auto relative">
+      <nav className="flex items-center justify-between py-4 px-4 md:px-8 max-w-7xl mx-auto relative">
         <div className="flex items-center md:hidden">
           <img src={hamburger} alt="Menu" className="w-6 h-6 cursor-pointer" />
         </div>

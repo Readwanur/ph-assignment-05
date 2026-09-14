@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="col-span-1">
             <img src={logo} alt="DevStack Logo" className="mb-6 h-8" />
-            <p className="text-gray-500 text-sm mb-6 max-w-[280px] leading-relaxed">
+            <p className="text-gray-500 text-sm mb-6 max-w-70 leading-relaxed">
               Curated tools, technologies, and resources for developers building
               modern software.
             </p>

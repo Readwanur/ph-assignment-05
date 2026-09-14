@@ -2,10 +2,9 @@ import React, { Suspense, useState, type Dispatch } from "react";
 import Cards from "./Cards";
 import YourStack from "./YourStack";
 import type { StackTypes } from "../types/StackTypes";
-import { DiVim } from "react-icons/di";
 
 const stackFetch = async (): Promise<StackTypes[]> => {
-  const result = await fetch("/public/data.json");
+  const result = await fetch("/data.json");
   const data = await result.json();
 
   return data;
